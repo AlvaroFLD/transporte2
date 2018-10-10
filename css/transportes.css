@@ -1,0 +1,456 @@
+/*font-family: 'Open Sans', sans-serif;*/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+header{
+	background-color: #2e64a1;
+	padding: 1em 0;
+}
+
+header h1{
+	color: white;
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: 100;
+	display: inline-block;
+	position: relative;
+	bottom: 0.8em;
+	margin-left: 0.5em;
+}
+nav{
+		background-color: #6da9ed;
+		margin-bottom: 2em;
+}
+nav ul{
+		list-style: none;
+		margin:0;
+		padding:0;
+}
+nav ul li{
+		display:inline-block;
+		width:20%;
+}
+nav ul li a{
+		color: white;
+		text-decoration:none; /* sirve para sacar el subrrayado */
+		text-align: center;
+		padding:0.2em 0.4em;
+		display:block;/* sirve para hacer que la ridereccion no solo sea la letra sino el cuadrado en si */
+		transition:all 0.5s ease;
+}
+/* el hover sirve para que cuando el puntero este arriba de la redireccion se coloree a un color que desee */
+
+nav ul li a:hover{
+		background-color: rgba(0, 0, 0, 0.3);
+		transition-delay: 0.0s;
+}
+nav ul li a.activo{
+		background:#4c76a5;
+}
+footer{
+		background-color: #ccc;
+		clear:both;
+		color:#333;
+		font-size:0.7em;
+		font-style: italic;
+		text-align: center;
+		padding:3em 0;
+		margin-top:2em;
+}
+footer p{
+		margin:0;
+}
+.holder{
+		max-width: 960px; /* gracias al "max" acomda todos los elementos dependiendo del tamaño de la ventana CLASE 20 */
+		margin:0 auto;
+}
+/* inicio pagina de home */
+h2{
+	color:#2e64a1;
+	font-weight: 400;
+	margin: 0 0 1em;
+}
+.bienvenidos{
+	width: 70%;
+	padding-right:2em;
+}
+.testimonios {
+
+	width:30%;
+}
+.right{
+	float:right;
+}
+.left{
+	float:left;
+}
+.testimonio{
+	background-color: #dddddd;
+	padding:1em;
+}
+.homeimg{
+	margin-bottom: 1.5em;
+	clear:both;
+}
+.homeimg img{
+		max-width:100%;
+		/* Ajusta la imagen depende de el tamaño de la ventana deseada-Clase20*/
+}
+/* recalcula el tamaño de los div para que todo cuadre en el 100% del padre */
+.bienvenidos, .testimonios{
+		box-sizing: border-box;
+}
+.testimonio .cita{
+		font-weight: bold;
+		font-style: italic;
+		font-size:1.4em;
+		display: block;
+		margin-bottom: 10px;
+
+}
+.bienvenidos p{
+		font-size:1.3em;
+}
+.testimonio .autor{
+		text-align: center;
+		font-size:0.7em;
+		display: block;
+}
+/* Fin de la pagina home */
+/*-----------------------------------------------------------------*/
+/* Comienzo de la pagina Nosotros */
+
+.historia p{
+	font-size: 0.8em;
+}
+.persona{
+	width:18%;
+	float:left;
+	margin-left:2.25%;
+	border:1px solid #ddd;
+	border-radius:0.25em;
+	box-sizing: border-box;
+}
+.persona figure{
+	margin:0.8em 0 1em;
+	text-align: center;
+}
+.persona figure img{
+	border-radius: 50%;
+	box-shadow:0 0 5px rgba(0,0,0,0.5);
+}
+.persona h5,.persona h6{
+	text-align: center;
+	font-weight:normal;
+	color: #2e64a1;
+	margin:0;
+}
+.persona h5{
+	font-size:0.9em;
+}
+.persona h6{
+	font-size: 0.8em;
+	margin-bottom:1em;
+	font-style:italic;
+}
+.persona p{
+	font-size: 0.7em;
+	margin: 0 1em 1em;
+	color:#444;
+}
+/* con esto puedo controlar el primero o el ultimo elemento */
+.persona:first-child{
+	margin-left:0;
+	/* tambien esta last-child */
+}
+/* Fin de la pagina nosotros */
+/* -----------------------------------------------------------------*/
+/* comnienza servicios */
+
+.servicio{
+	border:1px solid #ddd;
+	border-radius: 0.7em;
+	margin: 1em 0;
+	padding: 1em;
+	overflow:hidden;
+}
+.servicio figure{
+	display:inline-block;
+}
+.servicio figure img{
+	border-radius:0.8em;
+}
+.servicio .info{
+	width:75%;
+}
+.servicio .info h4{
+	color:#2e64a1;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weigth:500;
+	margin:0 0 1em;
+	border-bottom:1px solid #2e64a1;
+	padding-bottom:0.5em;
+}
+.servicio .info p{
+	font-size:0.8em;
+	line-height:1.2em;
+}
+/* odd=impar even=par, lo que vemos aca es una condicion el cual podemos ver como actua los elementos dependiendo de las condiciones */
+.servicio:nth-child(odd) figure{
+	float:left;
+	margin:0.1em 0 0;
+}
+.servicio:nth-child(odd) .info{
+	float:right;
+}
+.servicio:nth-child(even) figure{
+	float:right;
+	margin:0 0 0 1em;
+}
+.servicio:nth-child(even) .info{
+	float:left;
+}
+
+
+/* fin de servicios */
+/* _______________________________________________________ */
+
+												/* inicio galeria */
+
+.galeria .foto{
+	float:left;
+	width:18%;
+	margin:1em 0 1em 2.5%;
+	border:1px solid #ddd;
+	padding:0.3em;
+	box-sizing:border-box;
+}
+.galeria .foto img{
+	display:block;
+	width:100%;
+}
+.galeria .foto:nth-child(5n+1){
+	margin-left: 0;
+	border-color:red;
+}
+/* Fin de galeria */
+/* ______________________________________________________________ */
+													/* inicio Contacto */
+.columna {
+	width:50%;
+	padding: 0.625em;
+	box-sizing:border-box;
+}
+.columna.left{
+	border-right:1px solid red;
+}
+.columna.right p{
+	font-size: 0.8em;
+}
+.columna.right ul li{
+	font-size: 0.8em;
+}
+.formulario label{
+	vertical-align: top;
+	width: 16%;
+	display: inline-block;
+}
+.formulario input,
+.formulario textarea{
+	background:#ddd;
+	border-radius: 5px;
+	border:1px solid #999;
+	font-size: 0.8em;
+	padding:0.4em 0.6em;
+	width: 80%;
+}
+.formulario textarea{
+	height:10em;
+	resize:none;
+}
+.formulario input[type="submit"]{
+	background: #6da9ed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	color: white;
+	font-size: 1em;
+	padding:0.4em 2em;
+	text-align:center;
+	width: auto;
+}
+.formulario .acciones{
+	text-align:center;
+}
+
+													/* fin Galeria */
+/* inicio media 768px Clase20*/
+@media screen and (max-width:768px){
+		.holder{
+				max-width: 768px;
+				padding-left: 1em;
+				padding-right: 1em;
+		}
+		.home .columnas .bienvenidos,
+		.home .columnas .testimonios{
+				width:50%;
+		}
+		/* Clase 21 */
+		.nosotros .persona{
+				width: 30%;
+				margin-left: 3%;
+				margin-bottom: 3%;
+		}
+		.nosotros .persona:nth-child(3n+1){
+				margin-left: 0;
+		}
+		.nosotros .persona img{
+			width: 80%;
+		}/* agregado mio */
+		.servicios .servicio figure,
+		.servicios .servicio .info{
+				box-sizing: border-box;
+		}
+		.servicios .servicio figure{
+				max-width: 22%;
+		}
+		.servicios .servicio figure img{
+				width: 100%;
+		}
+		.galeria .foto{
+				width: 24%;
+				margin:1em 0 1em 1.3333%;
+				padding: 0.3em;
+		}
+		.galeria .foto:nth-child(5n+1){
+				margin-left: 1.3333%;
+				/* esto arregla el margen ya asignado anteriormente cuando en la ventana es ejecutada en 768 21*/
+		}
+		.galeria .foto:nth-child(4n+1){
+			margin-left: 0;
+			border-color: green;
+			/* esto lo que hace es tener un margen a la izquierda del cambio asignado cada 4 elementos-CLASE 21*/
+		}
+		.contacto .columna{
+			width: 100%;
+			float: none;
+			padding:0 1em;
+		}
+		.contacto .columna.left{
+				border:none;
+		}
+		.contacto .formulario label{
+			display:block;
+		}
+		.contacto .formulario input[type=text],
+		.contacto .formulario textarea{
+			display:block;
+		}
+		.contacto .formulario p{
+			margin-bottom:1.3em;
+		}
+}
+/* Fin media 768px */
+
+/* 480 AQUI SE OFENDE EL NENE MATY*/
+@media screen and (max-width:480px){
+		header .logo{
+				margin-left:1em;
+		}
+		header .logo h1{
+				font-size: 2em;
+		}
+		.home .columnas .bienvenidos,
+		.home .columnas .testimonios{
+				clear:both;
+				width: auto;
+				float: none;
+				display: block;
+		}
+		.home .columnas .bienvenidos{
+				padding:0.6em;
+		}
+		.home .columnas .bienvenidos p{
+				font-size: 1em;
+		}
+		.home .columnas .testimonios{
+			 /* centra y le da un minimo de ancho-Clase21 */
+				width: 50%;
+				margin:0 auto;
+				min-width: 220px;
+		}
+		.nosotros .persona{
+				width: 48%;
+				margin-left: 2%;
+				margin-bottom: 2%;
+		}
+		/* esto arregla el margen ya asignado anteriormente cuando en la ventana es ejecutada en 420 21*/
+		.nosotros .persona:nth-child(3n+1){
+				marigin-left:2%;
+		}
+		/* esto borra el margen a la izquierda de la primera columna */
+		.nosotros .persona:nth-child(2n+1){
+			margin-left: 0%;
+			border-color: blue;
+		}
+		.servicios .servicio figure,
+		servicios .servicio .info{
+				display: block;
+				float none;
+				width: 100%;
+		}
+		.servicios .servicio figure{
+				max-width: 100%;
+				margin: 0 0 1em 0;
+		}
+		.galeria .foto{
+				width: 30%;
+				margin: 1em 0 1em 3.3333%;
+				padding: 0.3em;
+		}
+		/* arregla los rojo */
+		.galeria .foto:nth-child(5n+1){
+				margin-left: 3.333%;
+		}
+		/* arregla los verde */
+		.galeria .foto:nth-child(4n+1){
+				margin-left: 3.333%;
+		}
+		/* arregla el margen nuevo de las primeras imagenes en cada fila */
+		.galeria .foto:nth-child(3n+1){
+				margin-left: 0%;
+				border-color:blue;
+		}
+		.contacto .formulario label{
+			font-size:0.8em;
+		}
+
+}
+/* fin media 480 */
+/* Inicio 360 */
+@media screen and (max-width:360px){
+		header .logo{
+				text-align: center;
+				margin-left: 0;
+		}
+		header .logo h1{
+				display:block;
+				position: static;
+		}
+		nav .holder{
+			padding:0;
+		}
+		nav ul li{
+			display:block;
+			width:auto;
+		}
+		nav ul li a{
+			text-align: left;
+			font-size: 1.2em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+}
